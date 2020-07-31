@@ -1,11 +1,18 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Setup Android Environment'
+description: 'Setup environment for Android development'
+author: 'Breeffy Inc.'
 inputs:
-  milliseconds: # change this
+  android-api-version:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'Android API version'
+  android-build-tools-version:
+    required: true
+    description: 'Android build tools version'
+outputs:
+  path:
+    description: 'Path to where the Android SDK has been installed (same as $ANDROID_HOME)'
+  version:
+    description: 'Actual version of the Android SDK that has been installed'
 runs:
   using: 'node12'
   main: 'dist/index.js'
